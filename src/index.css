@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap");
+
+:root {
+  --bg-cplor: #003b73;
+  --second-bg: #0074b7;
+  --txt-clr: #60a3d9;
+  --light-clr: #bfd7ed;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-family: "Lunasima", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-cplor);
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  padding: 2rem;
+  color: var(--light-clr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 1rem; */
+  border-bottom: 0.4rem solid var(--txt-clr);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: var(--bg-cplor);
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header__cart span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--second-bg);
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.cart__icon {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.products {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: var(--light-clr);
+}
+
+.prod__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.products {
+  margin-top: 1rem;
+}
+
+.each__prod_cont {
+  flex: 1;
+  width: 22rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.each__prod_cont img {
+  width: 20rem;
+  border-radius: 2rem;
+}
+
+.each__prod_cont h4 {
+  height: 1.5rem;
+  margin-top: 1rem;
+  color: var(--txt-clr);
+  text-align: center;
+}
+
+.each__prod_cont span {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--light-clr);
+}
+
+.each__prod_cont button,
+.cart__item__desc button {
+  background-color: var(--bg-cplor);
+  border: 0.2rem solid var(--txt-clr);
+  outline: none;
+  padding: 1rem;
+  color: var(--txt-clr);
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 2rem;
+}
+
+.each__prod_cont button:hover,
+.cart__item__desc button:hover {
+  background-color: var(--txt-clr);
+  color: var(--bg-cplor);
+}
+
+.cart__items {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.cart__item {
+  color: var(--txt-clr);
+  width: 100vw;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__item img {
+  width: 20rem;
+  border-radius: 2rem;
+}
+
+.cart__item__desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  font-weight: 700;
+}
+
+.cart__item__desc p b {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+}
+
+.cart__item__desc button {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.cart__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 3rem;
+}
+
+.cart__prd_price {
+  text-align: right;
+  margin-left: 3rem;
+}
+
+.cart {
+  height: 60vh;
+  max-width: 100%;
+}
+
+.empty__msg {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.total__price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--light-clr);
+  text-align: right;
+  margin: 3rem;
+}
+
+.cart h1 {
+  color: var(--light-clr);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.saperation {
+  width: 100%;
+  border: 3px solid var(--light-clr);
+}
+
+@media screen and (max-width: 600px) {
+  .cart__item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart__item__desc {
+    margin-top: 2rem;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+  }
+
+  .cart__right {
+    margin-right: 0;
+  }
+}
